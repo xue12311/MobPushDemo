@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <Button
+        android:id="@+id/but_get_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="获取标签"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/but_set_tags"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/but_set_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置标签"
+        app:layout_constraintLeft_toRightOf="@id/but_get_tags"
+        app:layout_constraintRight_toLeftOf="@id/but_delete_tags"
+        app:layout_constraintTop_toTopOf="@id/but_get_tags" />
+
+    <Button
+        android:id="@+id/but_delete_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除标签"
+        app:layout_constraintLeft_toRightOf="@id/but_set_tags"
+        app:layout_constraintRight_toLeftOf="@id/but_clean_tags"
+        app:layout_constraintTop_toTopOf="@id/but_set_tags" />
+
+    <Button
+        android:id="@+id/but_clean_tags"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="清空标签"
+        app:layout_constraintLeft_toRightOf="@id/but_delete_tags"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/but_delete_tags" />
+
+    <Button
+        android:id="@+id/but_get_alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="获取别名"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/but_set_alias"
+        app:layout_constraintTop_toBottomOf="@id/but_get_tags" />
+
+    <Button
+        android:id="@+id/but_set_alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置别名"
+        app:layout_constraintLeft_toRightOf="@id/but_get_alias"
+        app:layout_constraintRight_toLeftOf="@id/but_delete_alias"
+        app:layout_constraintTop_toTopOf="@id/but_get_alias" />
+
+    <Button
+        android:id="@+id/but_delete_alias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="删除别名"
+        app:layout_constraintLeft_toRightOf="@id/but_set_alias"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/but_set_alias" />
+
+    <Button
+        android:id="@+id/but_is_push_stopped"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="推送服务是否已经停止了"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/but_get_alias" />
+
+    <Button
+        android:id="@+id/but_restart_push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="重新打开推送服务"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/but_stop_push"
+        app:layout_constraintTop_toBottomOf="@id/but_is_push_stopped" />
+
+    <Button
+        android:id="@+id/but_stop_push"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="停止推送服务"
+        app:layout_constraintLeft_toRightOf="@id/but_restart_push"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/but_restart_push" />
+
+    <TextView
+        android:id="@+id/tv_show_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="是否显示角标"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/sb_show_badge"
+        app:layout_constraintTop_toBottomOf="@id/but_stop_push" />
+
+    <com.jl.mob_push.widget.SwitchButton
+        android:id="@+id/sb_show_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_show_badge"
+        app:layout_constraintLeft_toRightOf="@id/tv_show_badge"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_show_badge" />
+
+    <Button
+        android:id="@+id/but_get_device_token"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="获取厂商Token"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_badge" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
